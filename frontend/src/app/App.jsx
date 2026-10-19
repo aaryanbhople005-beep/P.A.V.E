@@ -1,16 +1,6 @@
-import { Outlet, useNavigate } from "react-router-dom";
-import AppLayout from "../components/layout/AppLayout.jsx";
+import { RouterProvider } from "react-router-dom";
+import Router from "./router.jsx";
 
 export default function App() {
-  const navigate = useNavigate();
-
-  const handleLogout = () => {
-    navigate("/admin/dashboard");
-  };
-
-  return (
-    <AppLayout onLogout={handleLogout}>
-      <Outlet />
-    </AppLayout>
-  );
+  return <Router />;
 }
